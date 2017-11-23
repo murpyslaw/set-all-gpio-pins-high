@@ -1,0 +1,39 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gpio-set-high", "gpio-set-high\gpio-set-high.vcxproj", "{8D95C871-93EC-4D13-9EDD-D156051D76C0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "out-of-box-firmware", "out-of-box-firmware\out-of-box-firmware.vcxproj", "{65BBC325-BEFA-4684-9259-7F340AEE4785}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|VisualGDB = Debug|VisualGDB
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|VisualGDB = Release|VisualGDB
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D95C871-93EC-4D13-9EDD-D156051D76C0}.Debug|VisualGDB.ActiveCfg = Debug|VisualGDB
+		{8D95C871-93EC-4D13-9EDD-D156051D76C0}.Debug|VisualGDB.Build.0 = Debug|VisualGDB
+		{8D95C871-93EC-4D13-9EDD-D156051D76C0}.Debug|x64.ActiveCfg = Debug|VisualGDB
+		{8D95C871-93EC-4D13-9EDD-D156051D76C0}.Debug|x86.ActiveCfg = Debug|VisualGDB
+		{8D95C871-93EC-4D13-9EDD-D156051D76C0}.Release|VisualGDB.ActiveCfg = Release|VisualGDB
+		{8D95C871-93EC-4D13-9EDD-D156051D76C0}.Release|VisualGDB.Build.0 = Release|VisualGDB
+		{8D95C871-93EC-4D13-9EDD-D156051D76C0}.Release|x64.ActiveCfg = Release|VisualGDB
+		{8D95C871-93EC-4D13-9EDD-D156051D76C0}.Release|x86.ActiveCfg = Release|VisualGDB
+		{65BBC325-BEFA-4684-9259-7F340AEE4785}.Debug|VisualGDB.ActiveCfg = Debug|VisualGDB
+		{65BBC325-BEFA-4684-9259-7F340AEE4785}.Debug|VisualGDB.Build.0 = Debug|VisualGDB
+		{65BBC325-BEFA-4684-9259-7F340AEE4785}.Debug|x64.ActiveCfg = Debug|VisualGDB
+		{65BBC325-BEFA-4684-9259-7F340AEE4785}.Debug|x86.ActiveCfg = Debug|VisualGDB
+		{65BBC325-BEFA-4684-9259-7F340AEE4785}.Release|VisualGDB.ActiveCfg = Release|VisualGDB
+		{65BBC325-BEFA-4684-9259-7F340AEE4785}.Release|VisualGDB.Build.0 = Release|VisualGDB
+		{65BBC325-BEFA-4684-9259-7F340AEE4785}.Release|x64.ActiveCfg = Release|VisualGDB
+		{65BBC325-BEFA-4684-9259-7F340AEE4785}.Release|x86.ActiveCfg = Release|VisualGDB
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

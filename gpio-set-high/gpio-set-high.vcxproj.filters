@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source files">
+      <UniqueIdentifier>{f9598ba3-37f9-41a1-850d-cab9301f3bec}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header files">
+      <UniqueIdentifier>{c558a39a-a945-4025-9b97-291269ca0c34}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource files">
+      <UniqueIdentifier>{dc14599e-316e-486d-8d3c-5251305e241b}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="VisualGDB settings">
+      <UniqueIdentifier>{19cfd709-b924-4c59-93d9-609dea45ee75}</UniqueIdentifier>
+      <Extensions>*.vgdbsettings</Extensions>
+    </Filter>
+    <Filter Include="Source files\Device-specific files">
+      <UniqueIdentifier>{c21772f4-d568-42d9-8247-484080064825}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\Device-specific files">
+      <UniqueIdentifier>{cb9a4d43-2378-417c-a10b-2987b7a5a4d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\driverlib">
+      <UniqueIdentifier>{93c7d7df-9bb8-4b75-8dc0-feba2d3c17be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\driverlib">
+      <UniqueIdentifier>{f2175b76-9062-405d-ac62-4e16c199f25b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="led-blink-Debug.vgdbsettings">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <None Include="led-blink-Release.vgdbsettings">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <None Include="mcu.props">
+      <Filter>Source files\Device-specific files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="MCU.xml">
+      <Filter>VisualGDB settings</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\adc10_a.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\adc12_a.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\aes.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\battbak.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\comp_b.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\crc.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\ctsd16.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\dac12_a.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\dma.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\driverlib.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\eusci_a_spi.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\eusci_a_uart.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\eusci_b_i2c.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\eusci_b_spi.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\flashctl.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\gpio.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\lcd_b.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\ldopwr.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\mpy32.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\oa.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\pmap.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\pmm.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\ram.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\ref.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\rtc_a.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\rtc_b.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\rtc_c.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\sd24_b.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\sfr.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\sysctl.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\tec.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\timer_a.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\timer_b.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\timer_d.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\tlv.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\ucs.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\usci_a_spi.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\usci_a_uart.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\usci_b_i2c.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\usci_b_spi.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\driverlib\MSP430F5xx_6xx\wdt_a.h">
+      <Filter>Header files\driverlib</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\adc10_a.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\adc12_a.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\aes.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\battbak.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\comp_b.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\crc.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\ctsd16.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\dac12_a.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\dma.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\eusci_a_spi.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\eusci_a_uart.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\eusci_b_i2c.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\eusci_b_spi.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\flashctl.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\gpio.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\lcd_b.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\ldopwr.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\mpy32.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\oa.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\pmap.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\pmm.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\ram.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\ref.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\rtc_a.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\rtc_b.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\rtc_c.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\sd24_b.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\sfr.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\sysctl.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\tec.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\timer_a.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\timer_b.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\timer_d.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\tlv.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\ucs.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\usci_a_spi.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\usci_a_uart.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\usci_b_i2c.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\usci_b_spi.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\driverlib\MSP430F5xx_6xx\wdt_a.c">
+      <Filter>Source files\driverlib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LEDBlink.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
