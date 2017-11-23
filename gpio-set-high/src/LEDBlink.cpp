@@ -1,24 +1,66 @@
 #define __MSP430FR5994__ true
 #include <driverlib.h>
 
+/*
+ * GPIO Initialization
+ */
+void Init_GPIO()
+{
+    // Set all GPIO pins to output low for low power
+    GPIO_setOutputLowOnPin(GPIO_PORT_P1, GPIO_PIN0|GPIO_PIN1|GPIO_PIN2|GPIO_PIN3|GPIO_PIN4|GPIO_PIN5|GPIO_PIN6|GPIO_PIN7);
+    GPIO_setOutputLowOnPin(GPIO_PORT_P2, GPIO_PIN0|GPIO_PIN1|GPIO_PIN2|GPIO_PIN3|GPIO_PIN4|GPIO_PIN5|GPIO_PIN6|GPIO_PIN7);
+    GPIO_setOutputLowOnPin(GPIO_PORT_P3, GPIO_PIN0|GPIO_PIN1|GPIO_PIN2|GPIO_PIN3|GPIO_PIN4|GPIO_PIN5|GPIO_PIN6|GPIO_PIN7);
+    GPIO_setOutputLowOnPin(GPIO_PORT_P4, GPIO_PIN1|GPIO_PIN2|GPIO_PIN3|GPIO_PIN4|GPIO_PIN5|GPIO_PIN6|GPIO_PIN7);
+    GPIO_setOutputLowOnPin(GPIO_PORT_P5, GPIO_PIN0|GPIO_PIN1|GPIO_PIN2|GPIO_PIN3|GPIO_PIN4|GPIO_PIN5|GPIO_PIN6|GPIO_PIN7);
+    GPIO_setOutputLowOnPin(GPIO_PORT_P6, GPIO_PIN0|GPIO_PIN1|GPIO_PIN2|GPIO_PIN3|GPIO_PIN4|GPIO_PIN5|GPIO_PIN6|GPIO_PIN7);
+    GPIO_setOutputLowOnPin(GPIO_PORT_P7, GPIO_PIN0|GPIO_PIN1|GPIO_PIN2|GPIO_PIN3|GPIO_PIN4|GPIO_PIN5|GPIO_PIN6|GPIO_PIN7);
+    GPIO_setOutputLowOnPin(GPIO_PORT_P8, GPIO_PIN0|GPIO_PIN1|GPIO_PIN2|GPIO_PIN3|GPIO_PIN4|GPIO_PIN5|GPIO_PIN6|GPIO_PIN7);
+    GPIO_setOutputLowOnPin(GPIO_PORT_PJ, GPIO_PIN0|GPIO_PIN1|GPIO_PIN2|GPIO_PIN3|GPIO_PIN4|GPIO_PIN5|GPIO_PIN6|GPIO_PIN7|GPIO_PIN8|GPIO_PIN9|GPIO_PIN10|GPIO_PIN11|GPIO_PIN12|GPIO_PIN13|GPIO_PIN14|GPIO_PIN15);
+    GPIO_setOutputHighOnPin(GPIO_PORT_P4, GPIO_PIN0);
+
+    GPIO_setAsOutputPin(GPIO_PORT_P1, GPIO_PIN0|GPIO_PIN1|GPIO_PIN2|GPIO_PIN3|GPIO_PIN4|GPIO_PIN5|GPIO_PIN6|GPIO_PIN7);
+    GPIO_setAsOutputPin(GPIO_PORT_P2, GPIO_PIN0|GPIO_PIN1|GPIO_PIN2|GPIO_PIN3|GPIO_PIN4|GPIO_PIN5|GPIO_PIN6|GPIO_PIN7);
+    GPIO_setAsOutputPin(GPIO_PORT_P3, GPIO_PIN0|GPIO_PIN1|GPIO_PIN2|GPIO_PIN3|GPIO_PIN4|GPIO_PIN5|GPIO_PIN6|GPIO_PIN7);
+    GPIO_setAsOutputPin(GPIO_PORT_P4, GPIO_PIN0|GPIO_PIN1|GPIO_PIN2|GPIO_PIN3|GPIO_PIN4|GPIO_PIN5|GPIO_PIN6|GPIO_PIN7);
+    GPIO_setAsOutputPin(GPIO_PORT_P5, GPIO_PIN0|GPIO_PIN1|GPIO_PIN2|GPIO_PIN3|GPIO_PIN4|GPIO_PIN5|GPIO_PIN6|GPIO_PIN7);
+    GPIO_setAsOutputPin(GPIO_PORT_P6, GPIO_PIN0|GPIO_PIN1|GPIO_PIN2|GPIO_PIN3|GPIO_PIN4|GPIO_PIN5|GPIO_PIN6|GPIO_PIN7);
+    GPIO_setAsOutputPin(GPIO_PORT_P7, GPIO_PIN0|GPIO_PIN1|GPIO_PIN2|GPIO_PIN3|GPIO_PIN4|GPIO_PIN5|GPIO_PIN6|GPIO_PIN7);
+    GPIO_setAsOutputPin(GPIO_PORT_P8, GPIO_PIN0|GPIO_PIN1|GPIO_PIN2|GPIO_PIN3|GPIO_PIN4|GPIO_PIN5|GPIO_PIN6|GPIO_PIN7);
+    GPIO_setAsOutputPin(GPIO_PORT_PJ, GPIO_PIN0|GPIO_PIN1|GPIO_PIN2|GPIO_PIN3|GPIO_PIN4|GPIO_PIN5|GPIO_PIN6|GPIO_PIN7|GPIO_PIN8|GPIO_PIN9|GPIO_PIN10|GPIO_PIN11|GPIO_PIN12|GPIO_PIN13|GPIO_PIN14|GPIO_PIN15);
+
+	// Configure P2.0 - UCA0TXD and P2.1 - UCA0RXD
+	GPIO_setOutputLowOnPin(GPIO_PORT_P2, GPIO_PIN0);
+	GPIO_setAsOutputPin(GPIO_PORT_P2, GPIO_PIN0);
+//    GPIO_setAsPeripheralModuleFunctionInputPin(GPIO_PORT_P2, GPIO_PIN1, 
+
+    // Set PJ.4 and PJ.5 as Primary Module Function Input, LFXT.
+ //   GPIO_setAsPeripheralModuleFunctionInputPin(
+ //          GPIO_PORT_PJ,
+ //          GPIO_PIN4 + GPIO_PIN5,
+ // 				 0x1
+ //          );
+
+    //Direct register access to avoid compiler warining - #10420-D
+    //For FRAM devices, at start up, the GPO power-on default
+    //high-impedance mode needs to be disabled to activate previously
+    //configured port settings. This can be done by clearing the LOCKLPM5
+    //bit in PM5CTL0 registe
+
+    // Disable the GPIO power-on default high-impedance mode
+    // to activate previously configured port settings
+    PM5CTL0 &= ~LOCKLPM5;
+}
 int main (void)
 {
     //Stop watchdog timer
-    WDT_A_hold(WDT_A_BASE);
+    //WDT_A_hold(WDT_A_BASE);
 
-    //Set P1.x to output direction
-    GPIO_setAsOutputPin(
-        GPIO_PORT_P1,
-        GPIO_PIN0 + GPIO_PIN1 + GPIO_PIN2 + GPIO_PIN3 +
-        GPIO_PIN4 + GPIO_PIN5 + GPIO_PIN6 + GPIO_PIN7
-        );
-
-    //Set all P1 pins HI
-    GPIO_setOutputHighOnPin(
-        GPIO_PORT_P1,
-        GPIO_PIN0 + GPIO_PIN1 + GPIO_PIN2 + GPIO_PIN3 +
-        GPIO_PIN4 + GPIO_PIN5 + GPIO_PIN6 + GPIO_PIN7
-        );
+		Init_GPIO();
+		for (int i = 0; i < 10; i++)
+		{
+			GPIO_toggleOutputOnPin(GPIO_PORT_P1, GPIO_PIN0);
+			GPIO_toggleOutputOnPin(GPIO_PORT_P1, GPIO_PIN1);
+		}
 
     //Enter LPM4 w/interrupt
     __bis_SR_register(LPM4_bits + GIE);
@@ -28,3 +70,4 @@ int main (void)
 
 	return 0;
 }
+
